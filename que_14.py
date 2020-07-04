@@ -13,7 +13,6 @@ def read_csv():
     with open('que_13.csv','r') as csvFile:
         reader = csv.DictReader(csvFile)
         for read in reader:
-            print(read)
             value_list.append(read)
     print(value_list)
 

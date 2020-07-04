@@ -4,17 +4,41 @@
 # to model a player.
 
 class Mario:
-    def __init__(self,character_name,color,hp,skills):
+    def __init__(self,character_name,color,size,level,speed):
         self.character_name = character_name
         self.color = color
-        self.hp = hp
-        self.skills = skills
+        self.size = size
+        self.level = level
+        self.speed = speed
         
+    def increase_level(self):
+        self.level += 1
     
-    def 
-        
-        
+    def increase_size_speed(self):
+        if self.level >= 5 and self.level <=10:
+            self.size += 5
+            self.speed +=5
+
+        elif self.level > 10 and self.level <= 20:
+            self.size += 5
+            self.speed += 5
+        else:
+            pass
+    
+    def change_color(self,new_color):
+        self.color = new_color
+    
+    def mario_info(self):
+        print("Character Name= ", self.character_name)
+        print('level= ',self.level)
+        print("speed= ",self.speed)
+        print('size= ',self.size)
 
 
 
-mario=Mario()
+mario=Mario('pujan','green',5,5,10)
+mario.mario_info()
+mario.increase_size_speed()
+mario.mario_info()
+mario.increase_level()
+mario.mario_info()

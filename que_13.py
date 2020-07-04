@@ -10,4 +10,12 @@
 
 import csv
 
-def 
+def make_csv(file_name,csv_value):
+    with open(file_name,'w') as csvFile:
+        writer = csv.writer(csvFile)
+        writer.writerow(['name','address','age'])
+        writer.writerows(csv_value)
+
+csv_values= [('George', '4312 Abbey Road', 22), ('John', '54 Love Ave', 21)]
+
+make_csv('que_13.csv',csv_values)
